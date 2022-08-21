@@ -1,13 +1,346 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+    scrollbar-width: none;
+    font-weight: 200;
+}
+
+.main-container {
+    width: 1420px;
+    position: absolute;
+    height: 90vh;
+    background: linear-gradient(170deg, #f8fca4 50%, #fff 50%);
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+
+.heading {
+    color: rgb(119, 91, 145);
+    position: relative;
+    left: 30%;
+    top: 8%;
+    height: 120px;
+    width: 40%;
+    padding: 10px;
+}
+
+.links-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    color: rgb(177, 168, 168);
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid black;
+}
+
+.links-slide h4 {
+    flex: 2;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.links-slide h4:active, .links-slide h4:hover {
+    color: darkorange;
+}
+
+.peronal-info {
+    border-bottom: 4px solid darkorange;
+    border-radius: 30px;
+}
+
+.personal-info hr, .billing-info hr, .confirm-payment hr {
+    border: 3.6px solid darkorange;
+    background-color: darkorange;
+    border-radius: 40px;
+    width: 9rem;
+    top: 78%;
+    position: absolute;
+    display: none;
+}
+
+.form-container {
+    position: relative;
+    left: 30%;
+    top: 8%;
+    height: 700px;
+    width: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.confirm-container {
+    position: relative;
+    left: 30%;
+    top: 20%;
+    height: 700px;
+    width: 40%;
+    padding: 10px;
+}
+
+.form-input {
+    width: 100%;
+    height: 55px;
+    margin: 25px 0 40px 0;
+}
+
+.bill {
+    margin-top: 0;
+}
+
+.form-container form:first-child {
+    margin-top: 10px;
+}
+
+.form-input label {
+    font-weight: 600;
+    font-family: sans-serif;
+    display: block;
+    font-size: 17px;
+}
+
+label span {
+    color: red;
+    font-size: 18px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.form-input small {
+    color: rgb(143, 125, 125);
+    font-weight: 400;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input-control {
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    height: 35px;
+    border: 1px solid grey;
+    background: white;
+    padding: 3px 15px;
+    font-size: 16px;
+    line-height: 2px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
+
+.address {
+    margin-top: 65px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.form-input-bill-flex1 {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-input-bill-flex2 {
+    flex-basis: 110px;
+}
+
+.first {
+     margin-right: 20px;
+}
+
+.form-input-flex1 {
+    flex-basis: 280px;
+    margin-right: 40px;
+}
+
+.form-input-flex2 {
+    flex: 1
+}
+
+label {
+    font-weight: 600;
+    font-family: sans-serif;
+    display: block;
+    font-size: 18px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 60px;
+    color: white;
+    cursor: pointer;
+    background-color: orange;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 400;
+    margin-right: 40px
+}
+
+button:hover {
+    opacity: .9;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.cancel-span {
+    color: rgb(78, 25, 128);
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-span:hover {
+    color: darkorange;
+}
+
+.active {
+    color: darkorange;
+}
+
+/* payment styling */
+
+.payment-container {
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: sans-serif;
+    box-shadow: 0 0 15px rgb(156, 150, 150);
+    overflow: hidden;
+}
+
+.payment-top-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(66, 66, 238);
+    color: white;
+    height: 50px;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-top-container span{
+    display: inline-block;
+    padding-right: 10px;
+    text-decoration: line-through;
+    text-decoration-style: double;
+}
+
+.payment-bottom-container {
+    width: 90%;
+    padding: 0;
+    color: rgb(63, 52, 80);
+    font-weight: 600;
+    font-family: Arial, Helvetica;
+    border-bottom: 1px solid rgb(119, 111, 131);
+    margin: auto;
+}
+
+.first-data, .second-data {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    margin: 45px 25px 25px 25px;
+}
+
+.second-data span {
+    color: black;
+}
+
+.carting {
+    width: 90%;
+    color: rgb(63, 52, 80);
+    font-weight: 600;
+    font-family: Arial, Helvetica;
+    display: flex;
+    margin: 25px auto;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid rgb(63, 52, 80);
+    height: 45px;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+/*---- confirm slide ----*/
+
+.container-confirm { 
+    width: 100%;
+    height: 280px;
+    background-color: #ffffff;
+    padding: 30px 100px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: sans-serif;
+    box-shadow: 0 0 15px rgb(156, 150, 150);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.confirm-tick {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 5px rgb(156, 150, 150);
+    border-radius: 50%;
+    align-self: center;
+    background-image: url('./images/tick.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: 100%;
+}
+
+.confirm-heading h2 {
+    font-weight: 600;
+    margin-top: 5px;
+    color: rgb(63, 52, 80);
+    font-family: arial;
+}
+
+.confirm-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm-small {
+    color: black;
+    font-family: arial;
+}
+
+.confirm-span {
+    text-decoration: underline;
+    color: darkorange;
+    cursor: pointer;
+}
+
+.confirm-span:hover {
+    opacity: .8;
 }
