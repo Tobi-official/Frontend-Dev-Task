@@ -403,3 +403,54 @@ button:active {
         left: -50%;
     }
 }
+
+
+
+
+@media screen and (max-width: 540px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .heading {
+         left: 2.5%;
+        width: 95%;
+    }
+
+    .personal-info hr, .billing-info hr, .confirm-payment hr {
+    width: 6rem;
+    top: 78%;
+    }
+
+    .form-container {
+        position: relative;
+        left: 2.5%;
+        width: 95%;
+    }
+
+    
+
+    .input-control {
+        border-radius: 5px;
+        width: 95%;
+        outline: none;
+        height: 35px;
+        border: 1px solid grey;
+        background: white;
+        padding: 3px 15px;
+        font-size: 16px;    
+    }
+
+    
+    .form-input-flex1 {
+        flex-basis: 220px;
+        margin-right: 20px;
+    }
+
+    
+    .container-confirm { 
+        width:  250%;
+        position: relative;
+        left: -75%;
+    }
+}
