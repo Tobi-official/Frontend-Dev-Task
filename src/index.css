@@ -13,9 +13,9 @@ body {
 }
 
 .main-container {
-    width: 1420px;
+    width: 100%;
     position: absolute;
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(170deg, #f8fca4 50%, #fff 50%);
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -311,11 +311,16 @@ button:active {
     box-shadow: 0 0 5px rgb(156, 150, 150);
     border-radius: 50%;
     align-self: center;
-    background-image: url('./images/tick.png');
+   /* background-image: url('./images/tick.png'); */
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: 100%;
+}
+
+.confirm-tick img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .confirm-heading h2 {
@@ -343,4 +348,58 @@ button:active {
 
 .confirm-span:hover {
     opacity: .8;
+}
+
+
+
+/*********** Media Query **************/
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .heading {
+        left: calc(50% - 25%);
+        width: 50%;
+    }
+
+    .form-container {
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
+
+    .container-confirm { 
+        width:  120%;
+        position: relative;
+        left: -10%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .heading {
+        left: 10%;
+        width: 80%;
+    }
+
+    .form-container {
+        position: relative;
+        left: 10%;
+        width: 80%;
+    }
+
+    .container-confirm { 
+        width:  200%;
+        position: relative;
+        left: -50%;
+    }
 }

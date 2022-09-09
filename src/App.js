@@ -74,9 +74,8 @@ export default function App() {
       return
     }
     setBilling(prev => prev = setPayment(true))
+
   }
-
-
 
   // On submit info
   const [formData, setFormData] = React.useState({
